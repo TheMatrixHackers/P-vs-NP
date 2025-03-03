@@ -1,0 +1,81 @@
+#settings-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+    transition: transform 0.5s ease;
+}
+
+#settings-icon i {
+    font-size: 24px;
+    color: rgb(0, 104, 255);
+}
+
+.draggable {
+    touch-action: none;
+}
+
+.social-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.social-icons.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.matrix-logo {
+    height: 24px;
+    width: auto;
+}
+
+.social-icon.github i {
+    color: #333;
+}
+
+.social-icon.youtube i {
+    color: #FF0000;
+}
+
+.social-icon.resources i {
+    color: #FFD700;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.social-icon.account i {
+    color: rgb(0, 104, 255);
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 2px #FFD700);
+    }
+    50% {
+        filter: drop-shadow(0 0 8px #FFD700);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px #FFD700);
+    }
+}
